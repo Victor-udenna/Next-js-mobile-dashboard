@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Montserrat } from 'next/font/google';
+import Link from 'next/link';
 import './globals.css'
 
 const inter = Montserrat({ subsets: ['latin'] })
@@ -16,7 +17,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+  
+      <body className={inter.className}>
+        <div>Header</div>
+      {children}
+      <div>
+      <Link href={"/"}>Home</Link>
+       <Link href={"/cards"}>Cards</Link>
+        <Link href={"/tickets"}>Ticket</Link>
+         <Link href={"/settings"}>Settings</Link>
+      </div></body>
+
     </html>
   )
 }

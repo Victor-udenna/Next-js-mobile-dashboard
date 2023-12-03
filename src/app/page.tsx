@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-<h1>Next Mobile application</h1>
+<h1 className="font-bold pb-48">Next Mobile application</h1>
   )
 }
